@@ -12,11 +12,12 @@ use app\core\Application;
 
 $app = new Application();
 
-$router = new Router();
-$router->get('/', function () {
+$app->router->get('/', function () {
   return 'Hello World';
 });
 
-$app->userRouter($router);
+$app->router->get('/users', function () {
+  return 'Users World';
+});
 
 $app->run();
