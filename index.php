@@ -6,9 +6,11 @@
  * Time: 06:30 PM
  */
 
-require_once
+require_once __DIR__ . '/vendor/autoload.php';
 
-  $app = new Application();
+use app\core\Application;
+
+$app = new Application();
 
 $router = new Router();
 $router->get('/', function () {

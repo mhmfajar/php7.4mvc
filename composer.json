@@ -1,0 +1,15 @@
+{
+    "name": "muhammadfajar/phpmvc-framework",
+    "authors": [
+        {
+            "name": "Muhammad Fajar",
+            "email": "muhammadfajar191@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "app\\": "./"
+        }
+    },
+    "require": {}
+}
