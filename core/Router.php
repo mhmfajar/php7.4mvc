@@ -54,21 +54,23 @@ class Router
     if (is_string($callback)) {
       return $this->renderView($callback);
     }
+    if (is_array($callback)) {
+      $callback[0] = new $callback[0]();
+    }
     return call_user_func($callback);
+  }
+
+  public function renderView($view, $params = [])
+  {
+    $layoutContent = $this->layoutContent();
+    $viewContent = $this->renderOnlyView($view, $params);
+    return str_replace('{{content}}', $viewContent, $layoutContent);
   }
 
   public function renderContent($viewContent)
   {
     $layoutContent = $this->layoutContent();
     return str_replace('{{content}}', $viewContent, $layoutContent);
-  }
-
-  public function renderView($view)
-  {
-    $layoutContent = $this->layoutContent();
-    $viewContent = $this->renderOnlyView($view);
-    return str_replace('{{content}}', $viewContent, $layoutContent);
-    include_once Application::$ROOT_DIR . "/views/$view.php";
   }
 
   protected function layoutContent()
@@ -78,8 +80,11 @@ class Router
     return ob_get_clean();
   }
 
-  protected function renderOnlyView($view)
+  protected function renderOnlyView($view, $params)
   {
+    foreach ($params as $key => $value) {
+      $$key = $value;
+    }
     ob_start();
     include_once Application::$ROOT_DIR . "/views/$view.php";
     return ob_get_clean();
