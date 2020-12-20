@@ -8,7 +8,9 @@
 
 namespace app\controllers;
 
+use app\core\Application;
 use app\core\Controller;
+use app\core\Request;
 
 /**
  * Class Router
@@ -33,8 +35,9 @@ class SiteController extends Controller
     return $this->render('contact');
   }
 
-  public function handleContact()
+  public function handleContact(Request $request)
   {
+    $request->getBody();
     return 'Handling Submitted Data';
   }
 }
