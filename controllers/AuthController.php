@@ -31,6 +31,7 @@ class AuthController extends Controller
   {
 
     $registerModel = new RegisterModel();
+    $this->setLayout('auth');
 
     if ($request->isPost()) {
       $registerModel->loadData($request->getBody());
@@ -44,7 +45,6 @@ class AuthController extends Controller
       ]);
     }
 
-    $this->setLayout('auth');
     return $this->render('auth/register', [
       'model' => $registerModel
     ]);
