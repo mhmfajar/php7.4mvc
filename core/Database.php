@@ -11,7 +11,7 @@ namespace app\core;
 use PDO;
 
 /**
- * Class Router
+ * Class Database
  * 
  * @author Muhammad Fajar <muhammadfajar191@gmail.com>
  * @package app\core

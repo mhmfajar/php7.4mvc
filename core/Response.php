@@ -9,7 +9,7 @@
 namespace app\core;
 
 /**
- * Class Router
+ * Class Response
  * 
  * @author Muhammad Fajar <muhammadfajar191@gmail.com>
  * @package app\core
