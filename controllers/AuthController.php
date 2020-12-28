@@ -44,9 +44,5 @@ class AuthController extends Controller
         'model' => $user
       ]);
     }
-
-    return $this->render('auth/register', [
-      'model' => $user
-    ]);
   }
 }
