@@ -1,11 +1,5 @@
 <?php
 
-/**
- * User: muhammadfajar
- * Date: 17/12/2020
- * Time: 06:30 PM
- */
-
 use app\core\Application;
 use Dotenv\Dotenv;
 

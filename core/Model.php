@@ -1,19 +1,7 @@
 <?php
 
-/**
- * User: muhammadfajar
- * Date: 17/12/2020
- * Time: 06:45 PM
- */
-
 namespace app\core;
 
-/**
- * Class Model
- * 
- * @author Muhammad Fajar <muhammadfajar191@gmail.com>
- * @package app\core
- */
 abstract class Model
 {
   public const RULE_REQUIRED = 'required';

@@ -1,11 +1,5 @@
 <?php
 
-/**
- * User: muhammadfajar
- * Date: 17/12/2020
- * Time: 06:30 PM
- */
-
 use app\controllers\AuthController;
 use app\controllers\SiteController;
 use app\core\Application;

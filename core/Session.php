@@ -1,21 +1,7 @@
 <?php
 
-/**
- * User: muhammadfajar
- * Date: 17/12/2020
- * Time: 06:45 PM
- */
-
 namespace app\core;
 
-use PDO;
-
-/**
- * Class Session
- * 
- * @author Muhammad Fajar <muhammadfajar191@gmail.com>
- * @package app\core
- */
 class Session
 {
   protected const FLASH_KEY = 'flash_messages';
