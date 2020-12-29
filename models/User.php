@@ -22,6 +22,11 @@ class User extends DbModel
     return 'users';
   }
 
+  public function primaryKey(): string
+  {
+    return 'id';
+  }
+
   public function save()
   {
     $this->status = self::STATUS_INACTIVE;
