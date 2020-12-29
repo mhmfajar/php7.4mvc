@@ -1,1 +1,1 @@
-<h1>Not Found</h1>
+<h1 class="mt-5">Not Found</h1>

@@ -42,7 +42,7 @@
         <?php else : ?>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Welcome <?= \app\core\Application::$app->user->getDisplayName(); ?></a>
+              <a class="nav-link" href="/profile">Profile <?= \app\core\Application::$app->user->getDisplayName(); ?></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/logout">Logout</a>
