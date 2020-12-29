@@ -2,8 +2,6 @@
 
 namespace app\core;
 
-use app\models\User;
-
 class Application
 {
 
@@ -22,6 +20,8 @@ class Application
 
   public function __construct($rootPath, array $config)
   {
+    error_reporting(E_ALL ^ E_DEPRECATED);
+
     $this->userClass = $config['userClass'];
     self::$ROOT_DIR = $rootPath;
     self::$app = $this;
@@ -39,6 +39,11 @@ class Application
     } else {
       $this->user = NULL;
     }
+  }
+
+  public static function isGuest()
+  {
+    return !self::$app->user;
   }
 
   public function run()
