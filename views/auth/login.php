@@ -2,6 +2,8 @@
 
 /** @var $model \app\models\User */
 
+$this->title = 'Login';
+
 ?>
 
 <h1 class="mt-5">Login</h1>

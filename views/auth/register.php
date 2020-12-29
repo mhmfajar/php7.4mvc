@@ -2,6 +2,8 @@
 
 /** @var $model \app\models\User */
 
+$this->title = 'Register Account';
+
 ?>
 
 <h1 class="mt-5">Register</h1>
