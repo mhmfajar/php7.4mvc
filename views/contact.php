@@ -1,6 +1,9 @@
 <?php
 
 /** @var $this \app\core\View */
+/** @var $model \app\models\ContactForm */
+
+use app\core\form\TextareaField;
 
 $this->title = 'Contact';
 
@@ -8,18 +11,9 @@ $this->title = 'Contact';
 
 <h1 class="mt-5">Contact Us</h1>
 
-<form action="" method="POST">
-  <div class="form-group">
-    <label for="subject">Subject</label>
-    <input type="text" class="form-control" id="subject" name="subject">
-  </div>
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" name="email">
-  </div>
-  <div class="form-group">
-    <label for="body">Body</label>
-    <textarea class="form-control" id="body" name="body"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<?php $form = \app\core\form\Form::begin('', 'POST'); ?>
+<?php echo $form->inputField($model, 'subject') ?>
+<?php echo $form->inputField($model, 'email')->emailField() ?>
+<?php echo $form->textareaField($model, 'body') ?>
+<button type="submit" class="btn btn-primary">Submit</button>
+<?php \app\core\form\Form::end(); ?>
