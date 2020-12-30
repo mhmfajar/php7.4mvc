@@ -26,7 +26,6 @@ class Application
   {
     error_reporting(E_ALL ^ E_DEPRECATED);
 
-    $this->userClass = $config['userClass'];
     self::$ROOT_DIR = $rootPath;
     self::$app = $this;
     $this->request = new Request();
@@ -39,6 +38,7 @@ class Application
 
     $primaryValue = $this->session->get('user');
     if ($primaryValue) {
+      $this->userClass = $config['userClass'];
       $primaryKey = $this->userClass::primaryKey();
       $this->user = $this->userClass::findOne([$primaryKey => $primaryValue]);
     } else {
