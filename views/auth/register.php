@@ -11,14 +11,14 @@ $this->title = 'Register Account';
 <?php $form = \app\core\form\Form::begin('', 'POST'); ?>
 <div class="form-row">
   <div class="col-md-6">
-    <?php echo $form->field($model, 'firstname') ?>
+    <?php echo $form->inputField($model, 'firstname') ?>
   </div>
   <div class="col-md-6">
-    <?php echo $form->field($model, 'lastname') ?>
+    <?php echo $form->inputField($model, 'lastname') ?>
   </div>
 </div>
-<?php echo $form->field($model, 'email')->emailField() ?>
-<?php echo $form->field($model, 'password')->passwordField() ?>
-<?php echo $form->field($model, 'confirmPassword')->passwordField() ?>
+<?php echo $form->inputField($model, 'email')->emailField() ?>
+<?php echo $form->inputField($model, 'password')->passwordField() ?>
+<?php echo $form->inputField($model, 'confirmPassword')->passwordField() ?>
 <button type="submit" class="btn btn-primary">Submit</button>
 <?php \app\core\form\Form::end(); ?>
