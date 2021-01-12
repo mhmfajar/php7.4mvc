@@ -3,8 +3,6 @@
 /** @var $this \app\core\View */
 /** @var $model \app\models\ContactForm */
 
-use app\core\form\TextareaField;
-
 $this->title = 'Contact';
 
 ?>
